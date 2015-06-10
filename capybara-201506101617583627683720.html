@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Your Movie Thingie</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+
+</head>
+<body>
+  <div class="container color_background">
+    <h1>Bob</h1>
+
+<h3>Select all movies starring this actor:</h3>
+
+<form action="/actors/434" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" id="395" name="movie_ids[]" value="395">The Blob
+    </label>
+  </div>
+
+  <button type="submit">Add movies</button>
+</form>
+
+
+<h3>Here are all the movies starring this actor:</h3>
+
+<ul>
+  <li>movie: The Blob</li>
+</ul>
+
+
+<a href="/">Return to Main Page</a>
+
+  </div>
+</body>
+</html>
