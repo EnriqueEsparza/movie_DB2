@@ -8,7 +8,7 @@
   <% @actors.each() do |actor| %>
   <div class="checkbox">
     <label>
-      <input type="checkbox" name="actor_ids[]" value="<%= actor.id() %>"><%= actor.name() %>
+      <input type="checkbox" id="<%= actor.id() %>" name="actor_ids[]" value="<%= actor.id() %>"><%= actor.name() %>
     </label>
   </div>
   <% end %>

@@ -44,3 +44,19 @@ describe('adding movies to an actor', {:type => feature}) do
   end
 end
 # save_and_open_page
+
+
+describe('adding actors to an movie', {:type => feature}) do
+  it('allows a user to click a checkbox and select an actor') do
+    test_actor = Actor.new({:name => 'Tom', :id => nil})
+    test_actor.save()
+    test_movie = Movie.new({:name => 'Jaws', :id => nil})
+    test_movie.save()
+    visit('/')
+    click_link('Jaws')
+    visit('/movies/' + test_movie.id().to_s())
+    check(test_actor.name())
+    click_button('Add actors')
+    expect(page).to have_content('Here are all the actors in this movie:')
+  end
+end
